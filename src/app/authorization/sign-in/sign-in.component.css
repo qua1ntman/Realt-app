@@ -1,0 +1,56 @@
+input {
+    width: 100%;
+}
+
+button {
+    width: 80px;
+}
+
+.input-container {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.or-wrapper {
+    position: relative;
+}
+
+.or-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.or {
+    padding: 0 16px;
+    background: #fff;
+}
+
+.another-in {
+    padding: 10px 50px;
+    margin-bottom: 10px;
+    color: rgb(241, 241, 241);
+    border-radius: 3px;
+}
+
+.google-in {
+    background-color: brown;
+    border: 2px solid rgb(131, 0, 0);
+    cursor: pointer;
+}
+
+.google-in:hover {
+    background-color: rgb(102, 28, 28);
+
+}
+
+.github-in {
+    background-color: rgb(78, 78, 78);
+    border: 2px solid rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.github-in:hover {
+    background-color: rgb(46, 45, 45);
+}

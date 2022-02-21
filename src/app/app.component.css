@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    min-width: 300px;
+    height: 100vh;
+    /* align-items: center; */
+}
+
+.sign {
+    background-color: rgb(126, 157, 240);
+    border-radius: 5px;
+    min-width: 270px;
+    padding: 15px;
+}
