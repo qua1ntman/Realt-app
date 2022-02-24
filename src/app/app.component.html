@@ -1,6 +1,9 @@
+<div class="app-wrapper">
+  <app-authorization (changeAuthHidding)="changeAuthoriationHidding($event)" *ngIf="isWantToSignIn"></app-authorization>
+  <app-header (changeAuthHidding)="changeAuthoriationHidding($event)"></app-header>
   <div class="container">
-    <div class="sign">
-      <router-outlet></router-outlet>
-    </div>
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
 </div>
 

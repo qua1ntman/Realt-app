@@ -6,7 +6,20 @@ button {
     width: 80px;
 }
 
+.sign {
+    background-color: rgb(126, 157, 240);
+    border-radius: 5px;
+    min-width: 270px;
+    padding: 15px;
+}
+
 .input-container {
     margin: 10px 0;
     text-align: left;
+}
+
+.change-sign {
+    text-decoration: underline;
+    color: brown;
+    cursor: pointer;
 }

@@ -1,5 +1,6 @@
+<div class="sign" >
     <h1>Sign up</h1>
-    <p>or you can <a routerLink="/login" (click)="changeWayToIn()">Sign in</a></p>
+    <p>or you can <span class="change-sign" (click)="change($event)">Sign in</span></p>
     <form>
         <div class="input-container">
             <label for="firstname" >First name</label>
@@ -21,8 +22,8 @@
             <label for="password">Password</label>
             <input id="password" type="password">
         </div>
-        <button>Sign up</button>
-
+        <button routerLink="/admin" (click)="changeAuthFunc($event)">Sign up</button>
     </form>
+</div>
 
 

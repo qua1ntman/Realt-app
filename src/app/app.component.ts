@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  isSingIn=true
+  isWantToSignIn=false
+
+  changeAuthoriationHidding(value: boolean): void {
+    this.isWantToSignIn=value
+  }
 
 
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-sign-in',
@@ -6,14 +6,27 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./sign-in.component.css']
 })
 export class SignInComponent implements OnInit {
-  @Input() isSingIn: boolean = true
+  
+  @Output()
+  changeSign = new EventEmitter()
+
+  @Output()
+  changeAuth = new EventEmitter()
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  changeWayToIn() {
-    this.isSingIn = !this.isSingIn
+  change (event: any): void {
+    this.changeSign.emit(true)
+    event.stopPropagation();
+
   }
 
+  changeAuthFunc(event: any) {
+    this.changeAuth.emit(false)
+    event.stopPropagation();
+
+  }
 }
