@@ -10,50 +10,58 @@ export class AdsModerationComponent implements OnInit {
 
   ads: Ad[] = [
     {
+      pic: '',
       title: 'House',
-      city: 'Minsk',
+      location: 'Minsk',
       date: new Date(2022, 2, 4).toLocaleDateString(),
       price: 100000
     },
     {
+      pic: '',
       title: 'Villa',
-      city: 'Minsk',
+      location: 'Minsk',
       date: new Date(2022, 5, 14).toLocaleDateString(),
       price: 200000
     },
     {
+      pic: '',
       title: 'Penthouse',
-      city: 'Minsk',
+      location: 'Minsk',
       date: new Date(2022, 3, 22).toLocaleDateString(),
       price: 500000
     },
     {
+      pic: '',
       title: 'Penthouse',
-      city: 'Minsk',
+      location: 'Minsk',
       date: new Date(2022, 3, 22).toLocaleDateString(),
       price: 500000
     },
     {
+      pic: '',
       title: 'Penthouse',
-      city: 'Minsk',
+      location: 'Minsk',
       date: new Date(2022, 3, 22).toLocaleDateString(),
       price: 500000
     },
     {
+      pic: '',
       title: 'Penthouse',
-      city: 'Minsk',
+      location: 'Minsk',
       date: new Date(2022, 3, 22).toLocaleDateString(),
       price: 500000
     },
     {
+      pic: '',
       title: 'Penthouse',
-      city: 'Minsk',
+      location: 'Minsk',
       date: new Date(2022, 3, 22).toLocaleDateString(),
       price: 500000
     },
     {
+      pic: '',
       title: 'Penthouse',
-      city: 'Minsk',
+      location: 'Minsk',
       date: new Date(2022, 3, 22).toLocaleDateString(),
       price: 500000
     }

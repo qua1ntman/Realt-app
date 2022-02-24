@@ -4,8 +4,7 @@ import { AdminComponent } from './admin/admin.component';
 import { AdsEditingComponent } from './admin/ads-editing/ads-editing.component';
 import { AdsModerationComponent } from './admin/ads-moderation/ads-moderation.component';
 import { AppealsComponent } from './admin/appeals/appeals.component';
-import { SignInComponent } from './authorization/sign-in/sign-in.component';
-import { SignUpComponent } from './authorization/sign-up/sign-up.component';
+
 import { CabineteComponent } from './client/cabinete/cabinete.component';
 import { CreateNewAdPageComponent } from './client/create-new-ad-page/create-new-ad-page.component';
 import { BulletinBoardComponent } from './unauthorized/bulletin-board/bulletin-board.component';

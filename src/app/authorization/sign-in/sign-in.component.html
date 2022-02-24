@@ -4,13 +4,18 @@
     <form>
         <div class="input-container">
             <label for="email">Email</label>
-            <input id="email" type="text">
+            <input id="email" name="email" type="text"  [(ngModel)]="loggedUser.email" required>
         </div>
+        <br>
         <div class="input-container">
             <label for="password">Password</label>
-            <input id="password" type="password">
+            <input id="password" name="password" type="password"  [(ngModel)]="loggedUser.password" required>
         </div>
-        <button routerLink="/ads" (click)="changeAuthFunc($event)">Sign in</button>
+        <br *ngIf="!123">
+        <div *ngIf="123" class="danger">
+            <div>Incorrect email or password</div>
+        </div>
+        <button class="sign-in-button" (click)="isFormFilled() ? changeAuthFunc($event) : ''">Sign in</button>
         <p>or</p>
         <div class="google-in another-in" (click)="changeAuthFunc($event)">Join with Google</div>
         <div class="github-in another-in" (click)="changeAuthFunc($event)">Join with Github</div>

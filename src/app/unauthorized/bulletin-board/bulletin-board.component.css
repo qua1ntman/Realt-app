@@ -1,11 +1,15 @@
 .ads-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-
-    width: 1440px;
+    -ms-grid-row-align: center;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    object-fit: cover;
+    width: 75vw;
 }
 
 .ad {
+    align-self: center;
+    justify-self: center;
+
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -26,9 +30,9 @@
     width: 270px;
 }
 
-.ad-date {
+/* .ad-date {
 
-}
+} */
 
 .ad-information {
     height: 80px;

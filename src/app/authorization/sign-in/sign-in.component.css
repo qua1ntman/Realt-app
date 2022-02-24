@@ -1,9 +1,30 @@
 input {
     width: 100%;
+    box-sizing: border-box;
 }
 
-button {
+.sign-in-button {
     width: 80px;
+    color: rgb(255, 255, 255);
+    border: 2px solid #162D7A;
+    background-color: #2B2D85;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s;
+    margin: 15px 0;
+}
+
+.sign-in-button:hover {
+    background-color: #3e40bb;
+}
+
+.danger {
+    background-color: rgb(245, 78, 78);
+    border: 1px solid red;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    opacity: .7;
+    margin: 0 10px;
 }
 
 .sign {
@@ -14,7 +35,7 @@ button {
 }
 
 .input-container {
-    margin: 10px 0;
+    margin: 0 10px;
     text-align: left;
 }
 
@@ -45,6 +66,7 @@ button {
     background-color: brown;
     border: 2px solid rgb(131, 0, 0);
     cursor: pointer;
+    transition: all .2s;
 }
 
 .google-in:hover {
@@ -56,6 +78,7 @@ button {
     background-color: rgb(78, 78, 78);
     border: 2px solid rgb(0, 0, 0);
     cursor: pointer;
+    transition: all .2s;
 }
 
 .github-in:hover {

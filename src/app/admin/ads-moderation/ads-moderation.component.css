@@ -1,6 +1,12 @@
+.table-moderation-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
 table {
     border-collapse: collapse;
-    width: 1440px;
+    width: min(1440px, 100vw);
 }
 
 thead {

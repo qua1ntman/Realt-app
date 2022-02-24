@@ -20,6 +20,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthorizationComponent } from './authorization/authorization.component';
 import { ClickStopPropaginationDirective } from './directives/stop-propagination/click-stop-propagination.directive';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -45,6 +46,7 @@ import { ClickStopPropaginationDirective } from './directives/stop-propagination
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
   ],
   providers: [],

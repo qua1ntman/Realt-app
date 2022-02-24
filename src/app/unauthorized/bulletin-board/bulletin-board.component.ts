@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Ad } from 'types/ad';
 
 @Component({
   selector: 'app-bulletin-board',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BulletinBoardComponent implements OnInit {
 
-  ads=[
+  ads: Ad[]=[
     {
       pic: 'rgb(146, 150, 153)',
       date: new Date(2022, 2, 3).toLocaleDateString(),

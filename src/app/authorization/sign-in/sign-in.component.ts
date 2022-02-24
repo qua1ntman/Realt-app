@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
+import { UserLoginData } from 'types/user-login-data';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,6 +8,11 @@ import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
 })
 export class SignInComponent implements OnInit {
   
+  loggedUser: UserLoginData = {
+    email: '',
+    password: ''
+  }
+
   @Output()
   changeSign = new EventEmitter()
 
@@ -27,6 +33,14 @@ export class SignInComponent implements OnInit {
   changeAuthFunc(event: any) {
     this.changeAuth.emit(false)
     event.stopPropagation();
-
+    if (this.loggedUser.email && this.loggedUser.password) {
+      console.log(this.loggedUser);
+    }
+    
   }
+
+  isFormFilled(): boolean {
+    return Boolean(this.loggedUser.email && this.loggedUser.password)
+  }
+
 }
