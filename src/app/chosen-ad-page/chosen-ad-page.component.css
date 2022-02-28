@@ -15,7 +15,7 @@
 .chosen-ad-pic {
     min-width: max(75vw, 400px);
     min-height: max(60vh, 250px);
-    background-color: crimson;
+    /* background-color: crimson; */
     border-radius: 30px;
 }
 

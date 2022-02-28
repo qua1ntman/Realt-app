@@ -10,6 +10,7 @@ export class AppComponent {
   isWantToSignIn: boolean =false
   loggedIn: boolean = false
   chosenAd: Ad = {
+    id: 0,
     pic: '',
     date: '',
     title: '',
@@ -26,10 +27,5 @@ export class AppComponent {
   logged(value: boolean): void {
     this.loggedIn = value
   }
-
-
-  // chosenAdData(eventData: Ad) {
-  //   this.chosenAd = eventData
-  // }
 
 }

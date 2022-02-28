@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Ad } from 'types/ad';
+import { AppDataService } from './../services/app-data.service';
 
 @Component({
   selector: 'app-chosen-ad-page',
@@ -8,21 +9,15 @@ import { Ad } from 'types/ad';
 })
 export class ChosenAdPageComponent implements OnInit {
 
+  chosenAd!: Ad
 
-  @Input()
-  chosenAd: Ad = {
-    pic: '',
-    date: '',
-    title: '',
-    price: 0,
-    location: ''
-  }
-
-
-  constructor() { }
+  constructor(private appDataService: AppDataService) { }
 
   ngOnInit(): void {
-    console.log('chosen', this.chosenAd);
+    let adData = this.appDataService.chosenAd
+    this.chosenAd = adData
+    console.log(this.chosenAd);
+    
   }
 
 }

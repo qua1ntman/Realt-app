@@ -7,7 +7,7 @@
 
     color: white;
     background-color: #162D7A;
-    font-size: .8rem;
+    font-size: max(.8rem, 1vw);
     padding: 1vh 0;
 }
 
