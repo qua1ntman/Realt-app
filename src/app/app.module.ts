@@ -12,15 +12,17 @@ import { AdsEditingComponent } from './admin/ads-editing/ads-editing.component';
 import { AppealsComponent } from './admin/appeals/appeals.component';
 import { CabineteComponent } from './client/cabinete/cabinete.component';
 import { EditAdPageComponent } from './client/edit-ad-page/edit-ad-page.component';
-import { BulletinBoardComponent } from './unauthorized/bulletin-board/bulletin-board.component';
 import { CreateNewAdPageComponent } from './client/create-new-ad-page/create-new-ad-page.component';
-import { MapPageComponent } from './unauthorized/map-page/map-page.component';
-import { MiniMapComponent } from './unauthorized/mini-map/mini-map.component';
+import { MapPageComponent } from './map-page/map-page.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AuthorizationComponent } from './authorization/authorization.component';
 import { ClickStopPropaginationDirective } from './directives/stop-propagination/click-stop-propagination.directive';
 import { FormsModule } from '@angular/forms';
+import { MainComponent } from './main/main.component';
+import { ChosenAdPageComponent } from './chosen-ad-page/chosen-ad-page.component';
+import { ClientPageComponent } from './client/client-page/client-page.component';
+import { AdminChatComponent } from './client/admin-chat/admin-chat.component';
 
 
 @NgModule({
@@ -34,14 +36,16 @@ import { FormsModule } from '@angular/forms';
     AppealsComponent,
     CabineteComponent,
     EditAdPageComponent,
-    BulletinBoardComponent,
     CreateNewAdPageComponent,
     MapPageComponent,
-    MiniMapComponent,
     HeaderComponent,
     FooterComponent,
     AuthorizationComponent,
     ClickStopPropaginationDirective,
+    MainComponent,
+    ChosenAdPageComponent,
+    ClientPageComponent,
+    AdminChatComponent,
   ],
   imports: [
     BrowserModule,

@@ -5,12 +5,14 @@
 }
 
 table {
+    border: 3px solid rgb(0, 0, 0);
     border-collapse: collapse;
     width: min(1440px, 100vw);
 }
 
 thead {
     font-weight: bold;
+    border: 3px solid rgb(0, 0, 0);
 }
 
 tr {
@@ -20,3 +22,4 @@ tr {
 th, td {
     padding: 5px;
 }
+

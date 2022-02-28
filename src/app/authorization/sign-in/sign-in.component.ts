@@ -1,14 +1,14 @@
-import { Component, Input, OnInit, Output, EventEmitter} from '@angular/core';
-import { UserLoginData } from 'types/user-login-data';
+import { Component, Output, EventEmitter} from '@angular/core';
+import { UserSignInData } from 'types/user-sign-in-data';
 
 @Component({
   selector: 'app-sign-in',
   templateUrl: './sign-in.component.html',
   styleUrls: ['./sign-in.component.css']
 })
-export class SignInComponent implements OnInit {
+export class SignInComponent {
   
-  loggedUser: UserLoginData = {
+  loggedUser: UserSignInData = {
     email: '',
     password: ''
   }
@@ -21,24 +21,21 @@ export class SignInComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  // Change sign in on sign up form
   change (event: any): void {
     this.changeSign.emit(true)
     event.stopPropagation();
 
   }
-
+  // "Sign in" btn work if form is valid 
   changeAuthFunc(event: any) {
-    this.changeAuth.emit(false)
-    event.stopPropagation();
-    if (this.loggedUser.email && this.loggedUser.password) {
-      console.log(this.loggedUser);
+    if(this.isFormFilled()) {
+      event.stopPropagation();
+      this.changeAuth.emit(false)
     }
-    
   }
-
+  
+  // Form validation for "Sign in" btn
   isFormFilled(): boolean {
     return Boolean(this.loggedUser.email && this.loggedUser.password)
   }

@@ -1,30 +1,31 @@
-import { Component, OnInit, Output, EventEmitter} from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  loggedIn: boolean = false
+  openCabinet: boolean = false
 
   @Output()
   changeAuthHidding = new EventEmitter()
 
   constructor() { }
 
-  logged() {
-    this.loggedIn = true
-  }
+  @Input()
+  loggedIn!: boolean;
 
-  changeAuth() {
+  // Hide "Sign in" btn and chenge "Add new ad" btn 
+  changeAuth(): void {
     this.changeAuthHidding.emit(true)
-    this.logged()
   }
 
-  ngOnInit(): void {
+  // Open menu (as cabinet)
+  openCabinetFunc(value: boolean): void {
+    this.openCabinet = value
   }
+
 
 }

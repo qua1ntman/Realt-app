@@ -1,11 +1,11 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-authorization',
   templateUrl: './authorization.component.html',
   styleUrls: ['./authorization.component.css']
 })
-export class AuthorizationComponent implements OnInit {
+export class AuthorizationComponent {
 
   isSignIn: boolean = true
   
@@ -13,16 +13,23 @@ export class AuthorizationComponent implements OnInit {
 
   @Output()
   changeAuthHidding = new EventEmitter()
+  @Output()
+  logged = new EventEmitter()
 
-  changeSignInAndSignUp(arg: boolean): void {
-    this.isSignIn = arg
+  
+  changeSignInAndSignUp(value: boolean): void {
+    this.isSignIn = value
   }
 
-  changeAuth(value: boolean) {
+  // Hide authorization
+  changeAuth(value: boolean): void {
     this.changeAuthHidding.emit(value)
   }
 
-  ngOnInit() {
+  // Hide authorization + change header btns
+  personLogged(value: boolean): void {
+    this.changeAuth(value)
+    this.logged.emit(!value)
   }
 
 }

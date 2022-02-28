@@ -10,13 +10,18 @@
     width: min(1440px, 100vw);
 }
 
-a {
+.admin-nav-btn{
     padding: 5px 10px;
     background-color: cornflowerblue;
 
-    border: 3px solid black;
+    border: 2px solid black;
     border-radius: 10px;
     text-decoration: none;
+    transition: all .2s;
+}
+
+.admin-nav-btn:hover {
+    background-color: rgb(166, 192, 240);
 }
 
 nav {

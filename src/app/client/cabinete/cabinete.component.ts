@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-cabinete',
   templateUrl: './cabinete.component.html',
   styleUrls: ['./cabinete.component.css']
 })
-export class CabineteComponent implements OnInit {
+export class CabineteComponent {
 
+  @Output()
+  closeCabinetFunc = new EventEmitter()
   constructor() { }
 
-  ngOnInit(): void {
-  }
 
+  closeCabinet(value: boolean): void {
+    this.closeCabinetFunc.emit(value)
+  }
+  
 }
