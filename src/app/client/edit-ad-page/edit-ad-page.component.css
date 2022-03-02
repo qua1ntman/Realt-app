@@ -1,0 +1,89 @@
+.create-new-ad-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+    height: 80vh; 
+    
+}
+
+.page-title {
+    font-size: max(1.4rem, 2vw);
+    font-weight: bold;
+}
+
+#title {
+    width: 100%;
+}
+
+.create-ad-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 70vh;
+}
+
+.ad-title-input {
+    width: max(150px, 45vw);
+   
+}
+
+.description-area {
+    max-width: max(150px, 45vw);
+    max-height: min(200px, 10vh);
+
+    width: max(150px, 45vw);
+    height: min(150px, 10vh);
+    margin: 5px 0;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.adress {
+    display: grid;
+    -ms-grid-row-align: center;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    width: 100%;
+}
+
+.adress > select,input {
+    box-sizing: border-box;
+    width: min(150px, 80vw);
+    padding: 5px;
+    margin: 5px 0;
+}
+
+.add-photo-btn {
+    width: 100px;
+    color: rgb(255, 255, 255);
+    border: 2px solid #2c3d74;
+    background-color: #3e3f85;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s; 
+}
+
+.add-photo-btn:hover {
+    background-color: #6365bd;
+}
+
+
+.create-ad-button {
+    padding: 10px 0;
+    max-width: 100px;
+    color: rgb(255, 255, 255);
+    border: 2px solid #162D7A;
+    background-color: #2B2D85;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.create-ad-button:hover {
+    background-color: #3e40bb;
+}

@@ -6,9 +6,6 @@
     height: 80vh;    
 }
 
-.admin-container {
-    width: min(1440px, 90vw);
-}
 
 .admin-nav-btn{
     padding: 5px 10px;

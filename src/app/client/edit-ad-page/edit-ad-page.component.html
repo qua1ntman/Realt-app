@@ -1,1 +1,45 @@
-<p>edit-ad-page works!</p>
+<div class="create-new-ad-container">
+    <div class="page-title">Edit ad</div>
+    <form class="create-ad-form">
+        <div class="ad-title-input input-container">
+            <label for="title">Title</label>
+            <input id="title" [(ngModel)]="adEdition.title" name="title" type="text">
+        </div>
+        <div class="ad-describtion-input input-container">
+            <label for="describtion">Describtion</label>
+            <textarea class="description-area" [(ngModel)]="adEdition.description" name="describtion" id="describtion"></textarea>
+        </div>
+        <div class="ad-title-input input-container">
+            <label for="price">Price</label>
+            <div><input id="price" [(ngModel)]="adEdition.price" name="price" type="number"> $</div>
+        </div>
+        <div class="ad-adress-input input-container">
+            <label for="adress">Adress</label>
+            <div class="adress" id="adress">
+                <select type="text">
+                    <option>Minsk region</option>
+                    <option>Vitebsk region</option>
+                    <option>Mogilev region</option>
+                    <option>Gomel region</option>
+                    <option>Grodno region</option>
+                    <option>Brest region</option>
+                </select>
+                <select type="text">
+                    <option>Minsk</option>
+                    <option>Molodechno</option>
+                    <option>Logoisk</option>
+                    <option>Soligorsk</option>
+                    <option>Borisov</option>
+                    <option>Volozhin</option>
+                </select>
+                <input type="text" placeholder="Street">
+                <input type="text" placeholder="House">
+            </div>
+
+        </div>
+        <div class="ad-photo">
+            <button class="add-photo-btn">Add photo</button>
+        </div>
+        <button class="create-ad-button" (click)="changeAdData()">Create</button>
+    </form>
+</div>

@@ -4,14 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { ClientRoutingModule } from './client-routing.module';
-import { ClientPageComponent } from './client-page/client-page.component';
 import { AdminChatComponent } from './admin-chat/admin-chat.component';
+import { ClientComponent } from './client.component';
+import { ClientAdsComponent } from './client-ads/client-ads.component';
 
 
 @NgModule({
   declarations: [
-    ClientPageComponent,
-    AdminChatComponent
+    AdminChatComponent,
+    ClientComponent,
+    ClientAdsComponent
   ],
   imports: [
     FormsModule,

@@ -1,16 +1,15 @@
 .create-new-ad-container {
-    margin: 2vh 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 60vw;
     height: 80vh; 
     
 }
 
 .page-title {
-    font-size: 2rem;
+    font-size: max(1.4rem, 2vw);
     font-weight: bold;
 }
 
@@ -26,16 +25,16 @@
 }
 
 .ad-title-input {
-    width: min(500px, 80vw);
+    width: max(150px, 45vw);
    
 }
 
 .description-area {
-    max-width: min(500px, 80vw);
+    max-width: max(150px, 45vw);
     max-height: min(200px, 10vh);
 
-    width: min(500px, 80vw);
-    height: min(200px, 10vh);
+    width: max(150px, 45vw);
+    height: min(150px, 10vh);
     margin: 5px 0;
 }
 
@@ -50,13 +49,13 @@
 .adress {
     display: grid;
     -ms-grid-row-align: center;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     width: 100%;
 }
 
 .adress > select,input {
     box-sizing: border-box;
-    width: min(240px, 80vw);
+    width: min(150px, 80vw);
     padding: 5px;
     margin: 5px 0;
 }

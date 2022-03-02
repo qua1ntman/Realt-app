@@ -16,14 +16,14 @@ import { EditAdPageComponent } from './client/edit-ad-page/edit-ad-page.componen
 import { CreateNewAdPageComponent } from './client/create-new-ad-page/create-new-ad-page.component';
 import { MapPageComponent } from './map-page/map-page.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { AuthorizationComponent } from './authorization/authorization.component';
 import { ClickStopPropaginationDirective } from './directives/stop-propagination/click-stop-propagination.directive';
-import { MainComponent } from './main/main.component';
 import { ChosenAdPageComponent } from './chosen-ad-page/chosen-ad-page.component';
 import { ClientModule } from './client/client.module';
 import { AdminModule } from './admin/admin.module';
 import { AppDataService } from './services/app-data.service';
+import { FooterComponent } from './footer/footer.component';
+import { MainComponent } from './main/main.component';
 
 
 @NgModule({
