@@ -7,6 +7,7 @@ import { ClientRoutingModule } from './client-routing.module';
 import { AdminChatComponent } from './admin-chat/admin-chat.component';
 import { ClientComponent } from './client.component';
 import { ClientAdsComponent } from './client-ads/client-ads.component';
+console.warn('client module has been loaded');
 
 
 @NgModule({

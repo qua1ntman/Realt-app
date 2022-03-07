@@ -20,7 +20,7 @@ export class EditAdPageComponent implements OnInit {
   }
 
   changeAdData(): void {
-    this.appDataService.chosenAdEdited(this.adEdition)
+    this.appDataService.putChangeAdDataHTTP(this.adEdition)
   }
 
 }

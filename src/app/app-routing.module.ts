@@ -1,19 +1,29 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { environment } from 'src/environments/environment';
 import { ChosenAdPageComponent } from './chosen-ad-page/chosen-ad-page.component';
 import { MainComponent } from './main/main.component';
 import { MapPageComponent } from './map-page/map-page.component';
+import { AdminComponent } from './admin/admin.component';
+import { ClientComponent } from './client/client.component';
+
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: '/ads', pathMatch: 'full' },
-  { path: 'ads', component: MainComponent },
-  { path: 'chosen_ad', component: ChosenAdPageComponent},
-  { path: 'map', component: MapPageComponent },
+  { path: '', redirectTo: environment.routes.main.ROUTE_MAIN, pathMatch: 'full' },
+  { path: environment.routes.main.ROUTE_MAIN, component: MainComponent },
+  { path: environment.routes.main.ROUTE_CHOSEN_AD, component: ChosenAdPageComponent},
+  { path: environment.routes.main.ROUTE_MAP, component: MapPageComponent },
+  { path: environment.routes.admin.admin, component: AdminComponent, loadChildren: () => import('./admin/admin.module')
+    .then(mod => mod.AdminModule)
+  },
+  { path: environment.routes.client.client, component: ClientComponent, loadChildren: () => import('./client/client.module')
+    .then(mod => mod.ClientModule)
+  }
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(
+  RouterModule.forRoot(
       appRoutes,
       {enableTracing: true}
     )

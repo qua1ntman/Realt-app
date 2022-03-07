@@ -5,6 +5,7 @@ import { CreateNewAdPageComponent } from './create-new-ad-page/create-new-ad-pag
 import { ClientComponent } from './client.component';
 import { ClientAdsComponent } from './client-ads/client-ads.component';
 import { EditAdPageComponent } from './edit-ad-page/edit-ad-page.component';
+import { environment } from 'src/environments/environment';
 
 
 const myAdsRoutes: Routes = [
@@ -15,19 +16,20 @@ const myAdsRoutes: Routes = [
 ];
 
 const clientPageRoutes: Routes = [
-  { path: '', redirectTo: 'my_page', pathMatch: 'full' },
-  { path: 'my_ads', component: ClientAdsComponent, children: myAdsRoutes },
-  { path: 'create', component: CreateNewAdPageComponent },
-  { path: 'edit', component: EditAdPageComponent },
-  { path: 'chat_with_admin', component: AdminChatComponent },
+  { path: '', redirectTo: environment.routes.client.clientChild.myAds, pathMatch: 'full' },
+  { path: environment.routes.client.clientChild.myAds, component: ClientAdsComponent, children: myAdsRoutes },
+  { path: environment.routes.client.clientChild.create, component: CreateNewAdPageComponent },
+  { path: environment.routes.client.clientChild.edit, component: EditAdPageComponent },
+  { path: environment.routes.client.clientChild.chatWithAdmin, component: AdminChatComponent },
 ];
 
 const accountRoutes: Routes = [
-  { path: 'client', component: ClientComponent, children: clientPageRoutes },
+  { path: environment.routes.client.client, component: ClientComponent, children: clientPageRoutes },
 ];
 
+
 @NgModule({
-  imports: [RouterModule.forChild(accountRoutes)],
+  imports: [RouterModule.forChild(clientPageRoutes)],
 exports: [RouterModule]
 })
 export class ClientRoutingModule { }

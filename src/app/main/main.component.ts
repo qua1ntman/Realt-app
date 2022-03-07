@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Ad } from 'types/ad';
 import { AppDataService } from './../services/app-data.service';
 
@@ -22,7 +22,7 @@ export class MainComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.ads = this.appDataService.adsData
+    this.appDataService.getAdsDataHTTP().subscribe(data => this.ads =  Object.values(data))
   }
 
 }

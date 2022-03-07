@@ -1,7 +1,7 @@
 <div class="chosen-ad-container">
-    <div class="chosen-ad-pic" [style.background-color]="chosenAd.pic"></div>
+    <img class="ad-picture" [src]="chosenAd.pic" width="100%" height="auto">
     <div class="chosen-ad-title">{{chosenAd.title}}</div>
-    <div class="chosen-ad-price">{{chosenAd.price}}$</div>
+    <div class="chosen-ad-price">{{chosenAd.price | currency: 'USD'}} </div>
     <div class="chosen-ad-date">{{chosenAd.date}}</div>
     <div class="chosen-ad-description">{{chosenAd.description}}</div>
 </div>

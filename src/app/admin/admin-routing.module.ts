@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { environment } from 'src/environments/environment';
 import { AdminChatForAdminComponent } from './admin-chat-for-admin/admin-chat-for-admin.component';
 import { AdminComponent } from './admin.component';
 import { AdsEditingComponent } from './ads-editing/ads-editing.component';
@@ -8,17 +9,17 @@ import { AdsModerationComponent } from './ads-moderation/ads-moderation.componen
 
 const adminRoutes: Routes = [
   {path: '', redirectTo: 'moderation', pathMatch: 'full' },
-  {path: 'moderation', component: AdsModerationComponent},
-  {path: 'edit', component: AdsEditingComponent},
-  {path: 'admin_chat', component: AdminChatForAdminComponent}
+  {path: environment.routes.admin.adminChild.moderation, component: AdsModerationComponent},
+  {path: environment.routes.admin.adminChild.edit, component: AdsEditingComponent},
+  {path: environment.routes.admin.adminChild.adminChat, component: AdminChatForAdminComponent}
 ];
 
 const appRoutes: Routes = [
-  { path: 'admin', component: AdminComponent, children: adminRoutes},
+  { path: environment.routes.admin.admin, component: AdminComponent, children: adminRoutes},
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(appRoutes)],
+  imports: [RouterModule.forChild(adminRoutes)],
   exports: [RouterModule]
 })
 export class AdminRoutingModule { }
