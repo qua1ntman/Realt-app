@@ -19,7 +19,7 @@ const clientPageRoutes: Routes = [
   { path: '', redirectTo: environment.routes.client.clientChild.myAds, pathMatch: 'full' },
   { path: environment.routes.client.clientChild.myAds, component: ClientAdsComponent, children: myAdsRoutes },
   { path: environment.routes.client.clientChild.create, component: CreateNewAdPageComponent },
-  { path: environment.routes.client.clientChild.edit, component: EditAdPageComponent },
+  { path: environment.routes.client.clientChild.editPage, component: EditAdPageComponent },
   { path: environment.routes.client.clientChild.chatWithAdmin, component: AdminChatComponent },
 ];
 

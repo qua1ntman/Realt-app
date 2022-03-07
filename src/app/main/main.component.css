@@ -41,7 +41,7 @@
     position: absolute;
     top: 35px;
     right: 20px;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
     padding: 2px;
 }
@@ -67,6 +67,7 @@
 }   
 
 .ad-location-div {
+    font-size: .8rem;
     grid-area: location;
     color: gray;
 }
@@ -81,13 +82,14 @@
     width: max(65px, 10vh);
     border: 1px solid #2E5DFA;
     border-radius: 50%;
-    background-color: aqua;
+    background: url('./../pngs/planet.jpg') center no-repeat;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     transition: all .2s;
-
+    color: white;
     cursor: pointer;
 }
 

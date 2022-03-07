@@ -15,7 +15,8 @@ export class AppComponent {
     date: '',
     title: '',
     price: 0,
-    location: ''
+    location: '',
+    description: ''
   }
 
   // Show or hide authoriation

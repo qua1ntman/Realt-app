@@ -1,11 +1,14 @@
+.wrapper-center {
+    height: 82vh; 
+    display: flex;
+    align-items: center;
+}
+
 .create-new-ad-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 60vw;
-    height: 80vh; 
-    
 }
 
 .page-title {

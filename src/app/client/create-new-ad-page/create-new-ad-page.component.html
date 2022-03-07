@@ -3,20 +3,20 @@
     <form class="create-ad-form">
         <div class="ad-title-input input-container">
             <label for="title">Title</label>
-            <input id="title" type="text">
+            <input id="title" [(ngModel)]="newAd.title" name="title" type="text">
         </div>
-        <div class="input-container">
+        <div class="ad-describtion-input input-container">
             <label for="describtion">Describtion</label>
-            <textarea class="description-area" name="describtion" id="describtion"></textarea>
+            <textarea class="description-area" [(ngModel)]="newAd.description" name="describtion" id="describtion"></textarea>
         </div>
         <div class="ad-title-input input-container">
             <label for="price">Price</label>
-            <div><input id="price" type="number"> $</div>
+            <div><input id="price" [(ngModel)]="newAd.price" name="price" type="number"> $</div>
         </div>
         <div class="ad-adress-input input-container">
             <label for="adress">Adress</label>
-            <div class="adress" id="adress">
-                <select type="text">
+            <div class="adress" id="adress" >
+                <select type="text"  [(ngModel)]="newAd.location[0]" name="region">
                     <option>Minsk region</option>
                     <option>Vitebsk region</option>
                     <option>Mogilev region</option>
@@ -24,22 +24,17 @@
                     <option>Grodno region</option>
                     <option>Brest region</option>
                 </select>
-                <select type="text">
-                    <option>Minsk</option>
-                    <option>Molodechno</option>
-                    <option>Logoisk</option>
-                    <option>Soligorsk</option>
-                    <option>Borisov</option>
-                    <option>Volozhin</option>
+                <select type="text" [(ngModel)]="newAd.location[1]" name="city">
+                    <option *ngFor="let city of cities">{{city}}</option>
                 </select>
-                <input type="text" placeholder="Street">
-                <input type="text" placeholder="House">
+                <input [(ngModel)]="newAd.location[2]" type="text" placeholder="Street" name="street">
+                <input [(ngModel)]="newAd.location[3]" type="text" placeholder="House" name="house">
             </div>
 
         </div>
         <div class="ad-photo">
             <button class="add-photo-btn">Add photo</button>
         </div>
-        <button class="create-ad-button">Create</button>
+        <button class="create-ad-button" (click)="createAd()">Create</button>
     </form>
 </div>

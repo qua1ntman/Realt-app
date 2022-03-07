@@ -14,6 +14,14 @@ export class AdsEditingComponent implements OnInit{
   constructor(private appDataService: AppDataService) { }
 
   ngOnInit(): void {
+    if (this.appDataService.adsData) {
       this.ads = this.appDataService.adsData
+    } else {
+      this.appDataService.getAdsDataHTTP().subscribe(data => this.ads = Object.values(data))
+    }
+  }
+
+  chosenAdToEdit(ad: Ad): void {
+    this.appDataService.putChangeAdDataHTTP(ad)
   }
 }

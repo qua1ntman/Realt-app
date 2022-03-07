@@ -15,12 +15,16 @@ export class ClientAdsComponent implements OnInit {
     constructor(private appDataService: AppDataService) { }
   
     ngOnInit(): void {
-      this.ads = this.appDataService.adsData
+      if (this.appDataService.adsData) {
+        this.ads = this.appDataService.adsData
+      } else {
+        this.appDataService.getAdsDataHTTP().subscribe(data => this.ads = Object.values(data))
+      }
     }
 
     editChosenAd(ad: Ad): void {
       this.appDataService.chosenAdDataForEdition(ad)
-      console.log('client ad', ad);
+      ;
       
     }
   

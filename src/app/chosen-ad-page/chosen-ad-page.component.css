@@ -1,5 +1,4 @@
 .chosen-ad-container {
-    position: relative;
     width: 75vw;
     min-height: 84vh;
     padding: 5vh 0;
@@ -9,10 +8,13 @@
     align-items: center;
 
 }
+.pic-date-container {
+    position: relative;
+}
 
-.chosen-ad-pic {
-    min-width: max(75vw, 400px);
-    min-height: max(60vh, 250px);
+.ad-picture {
+    width: max(60vw, 400px);
+    min-height: auto;
     border-radius: 30px;
 }
 
@@ -32,9 +34,9 @@
 
 .chosen-ad-date {
     position: absolute;
-    top: 12vh;
+    top: 3vh;
     right: 3vw;
-    background-color: rgba(255, 255, 255, .3);
+    background-color: rgba(255, 255, 255, .6);
     padding: 10px;
     font-size: 1.2rem;
     border-radius: 10px;
