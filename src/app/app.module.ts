@@ -10,7 +10,6 @@ import { SignInComponent } from './authorization/sign-in/sign-in.component';
 import { AdminComponent } from './admin/admin.component';
 import { AdsModerationComponent } from './admin/ads-moderation/ads-moderation.component';
 import { AdsEditingComponent } from './admin/ads-editing/ads-editing.component';
-import { AppealsComponent } from './admin/appeals/appeals.component';
 import { CabineteComponent } from './client/cabinete/cabinete.component';
 import { EditAdPageComponent } from './client/edit-ad-page/edit-ad-page.component';
 import { CreateNewAdPageComponent } from './client/create-new-ad-page/create-new-ad-page.component';
@@ -32,7 +31,6 @@ import { MainComponent } from './main/main.component';
     AdminComponent,
     AdsModerationComponent,
     AdsEditingComponent,
-    AppealsComponent,
     CabineteComponent,
     EditAdPageComponent,
     CreateNewAdPageComponent,

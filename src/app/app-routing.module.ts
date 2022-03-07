@@ -9,10 +9,11 @@ import { ClientComponent } from './client/client.component';
 
 
 const appRoutes: Routes = [
-  { path: '', redirectTo: environment.routes.main.ROUTE_MAIN, pathMatch: 'full' },
-  { path: environment.routes.main.ROUTE_MAIN, component: MainComponent },
-  { path: environment.routes.main.ROUTE_CHOSEN_AD, component: ChosenAdPageComponent},
-  { path: environment.routes.main.ROUTE_MAP, component: MapPageComponent },
+  { path: '', redirectTo: environment.routes.main.routeMain, pathMatch: 'full' },
+  { path: environment.routes.main.routeMain, component: MainComponent },
+  { path: environment.routes.main.routeChosenAd, component: ChosenAdPageComponent},
+  { path: environment.routes.main.routeMain, component: MapPageComponent },
+
   { path: environment.routes.admin.admin, component: AdminComponent, loadChildren: () => import('./admin/admin.module')
     .then(mod => mod.AdminModule)
   },

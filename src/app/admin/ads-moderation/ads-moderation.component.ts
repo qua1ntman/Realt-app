@@ -14,6 +14,10 @@ export class AdsModerationComponent implements OnInit{
   constructor(private appDataService: AppDataService) { }
 
   ngOnInit(): void {
+    if (this.appDataService.adsData) {
       this.ads = this.appDataService.adsData
+    } else {
+      this.appDataService.getAdsDataHTTP().subscribe(data => this.ads = Object.values(data))
+    }
   }
 }

@@ -1,5 +1,6 @@
 .chat-space {
-    min-width: 54vw;
+    width: 55vw;
+    min-width: 240px;
     height: 75vh;
     border: 1px solid rgb(170, 171, 189);
     background-color: rgb(196, 197, 216);
@@ -10,8 +11,8 @@
 .chat-input-container {
     display: flex;
     justify-content: center;
-    min-width: 54vw;
-    max-width: 60vw;
+    min-width: 240px;
+    max-width: 58vw;
     min-height: 30px;
     margin: 0 5px;
 }

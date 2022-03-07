@@ -2,16 +2,17 @@ export const environment = {
   production: false,
   routes: {
     main: {
-      ROUTE_MAIN: 'ads',
-      ROUTE_CHOSEN_AD: "chosen_ad",
-      ROUTE_MAP: 'map'
+      routeMain: 'ads',
+      routeChosenAd: "chosen_ad",
+      routeMap: 'map'
     },
     admin: {
       admin: 'admin',
       adminChild: {
         moderation: 'moderation',
         edit: 'edit',
-        adminChat: 'admin_chat'
+        adminChat: 'admin_chat',
+        editPage: 'edit/:id',
       }
     },
     client: {
@@ -19,7 +20,7 @@ export const environment = {
       clientChild: {
         myAds: 'my_ads',
         create: 'create',
-        edit: 'edit',
+        editPage: 'edit/:id',
         chatWithAdmin: 'chat_with_admin',
       }
     }
